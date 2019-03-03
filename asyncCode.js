@@ -44,7 +44,7 @@ everyXsecsForYsecs = (func, delay, duration) => {
   let numOfExecutions = Math.floor(runTime / interval);
 
   while (numOfExecutions) {
-    setTimeout(async () => await func(), interval);
+    setTimeout(() => func(), interval);
     interval += initialInterval;
     numOfExecutions--;
   }
