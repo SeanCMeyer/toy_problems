@@ -4,12 +4,15 @@
 //             //
 /////////////////
 
-// /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
+/* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 1");
-// ...your code below
+
+console.log("I am at the beginning of the code");
+setTimeout(() => console.log("I am in the setTimeout callback function"), 0);
+console.log("I am at the end of the code");
 
 console.log("End of Challenge 1");
-// */// (do not alter this line)
+*/ // (do not alter this line)
 
 /////////////////
 //             //
@@ -17,18 +20,13 @@ console.log("End of Challenge 1");
 //             //
 /////////////////
 
-// /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
+/* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 2");
-// ...your code below
+const sayHello = setInterval(() => console.log("Interval Hello!"), 2000);
 
-// ...your code above
-function clearAllIntervals() {
-  for (let i = 0; i < 1000; i++) {
-    clearInterval(i);
-  }
-}
+setTimeout(() => clearInterval(sayHello), 10000);
 console.log("End of Challenge 2");
-// */// (do not alter this line)
+*/ // (do not alter this line)
 
 /////////////////
 //             //
@@ -38,7 +36,26 @@ console.log("End of Challenge 2");
 
 // /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 3");
-// ...your code below
+
+everyXsecsForYsecs = (func, delay, duration) => {
+  let initialInterval = delay * 1000;
+  let interval = initialInterval;
+  let runTime = duration * 1000;
+  let numOfExecutions = Math.floor(runTime / interval);
+
+  while (numOfExecutions) {
+    setTimeout(async () => await func(), interval);
+    interval += initialInterval;
+    numOfExecutions--;
+  }
+
+  //   const runID = setInterval(() => func(), interval);
+  //   setTimeout(() => clearInterval(runID), runTime);
+};
+
+sayHowdy = () => console.log("Howdy");
+
+everyXsecsForYsecs(sayHowdy, 1, 5);
 
 console.log("End of Challenge 3");
 // */// (do not alter this line)
