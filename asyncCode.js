@@ -66,7 +66,7 @@ console.log("End of Challenge 3");
 //             //
 /////////////////
 
-// /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
+/* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 4");
 
 fakeForEach = (arr, cb) => {
@@ -84,7 +84,7 @@ delayLog = (delayTime, i) => {
 fakeForEach(delays, delayLog(value, index));
 
 console.log("End of Challenge 4");
-// */// (do not alter this line)
+ */ // (do not alter this line)
 
 /////////////////
 //             //
@@ -94,7 +94,21 @@ console.log("End of Challenge 4");
 
 // /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 5");
-// ...your code below
+
+checkBackgroundColor = () => {
+  document.body.style.background === "rgb(221, 238, 255)"
+    ? (document.body.style.background = "rgb(255, 238, 221)")
+    : (document.body.style.background = "rgb(221, 238, 255)");
+};
+
+document
+  .getElementById("activate")
+  .addEventListener("click", () => console.log("clicked #1"));
+
+document.getElementById("color").addEventListener("click", () => {
+  console.log("clicked #2");
+  checkBackgroundColor();
+});
 
 // ...your code above
 document.body.style.background = "#def";
