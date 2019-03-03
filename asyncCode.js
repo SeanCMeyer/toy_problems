@@ -34,7 +34,7 @@ console.log("End of Challenge 2");
 //             //
 /////////////////
 
-// /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
+/* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 3");
 
 everyXsecsForYsecs = (func, delay, duration) => {
@@ -58,7 +58,7 @@ sayHowdy = () => console.log("Howdy");
 everyXsecsForYsecs(sayHowdy, 1, 5);
 
 console.log("End of Challenge 3");
-// */// (do not alter this line)
+*/ // (do not alter this line)
 
 /////////////////
 //             //
@@ -68,7 +68,20 @@ console.log("End of Challenge 3");
 
 // /* <<<=== Remove the first two slashes (//) to comment out this challenge when finished
 console.log("Start of Challenge 4");
-// ...your code below
+
+fakeForEach = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    cb(arr[i], i, arr);
+  }
+};
+
+const delays = [2000, 5000, 0, 3500];
+
+delayLog = (delayTime, i) => {
+  setTimeout(() => console.log(`printing element ${i}`), delayTime);
+};
+
+fakeForEach(delays, delayLog(value, index));
 
 console.log("End of Challenge 4");
 // */// (do not alter this line)
